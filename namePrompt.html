@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Name Prompt Program</title>
+    </head>
+
+    <body>
+        <script type="text/javascript">
+            // Uses prompt boxes to store three names in an array
+            const names = [];
+            for (let i = 0; i < 3; i++) {
+                let name = prompt("Enter name " + (i + 1) + ":");
+                names.push(name);
+            }
+
+            // Outputs the array to the html page
+            for (name of names) {
+                document.write("<p>Hello " + name + ", there are " + name.length + " letters in your name.</p>");
+            }
+
+            // Alert box sorting the names alphabetically
+            names.sort();
+            let alpabeticalSortMessage = "Here is the list of names in alphabetical order:\n";
+            for (name of names) {
+                alpabeticalSortMessage += name + "\n";
+            }
+            alert(alpabeticalSortMessage);
+
+            // Alert box sorting the names reverse-alphabetically
+            names.reverse();
+            let reverseSortMessage = "Here is the list of names in reverse alphabetical order:\n";
+            for (name of names) {
+                reverseSortMessage += name + "\n";
+            }
+            alert(reverseSortMessage);
+        </script>
+    </body>
+</html>
